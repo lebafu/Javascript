@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers</title>
+</head>
+<body>
+    <script>
+
+        var mostrarMensaje=function(){
+            alert("Tiempo Completo");
+        }
+
+        mostrarMensaje=() => alert("Tiempo Completo");
+
+        //setTimeout(()=> alert("Tiempo Completo"),4000)
+        var timer=setInterval(()=>alert("Tiempo Cumplido",1000));
+
+        //alert(timer);
+        setTimeout(()=>{
+            clearInterval(timer);;
+
+        },10 * 1000)
+        //clearInterval(timer);
+
+        setTimeout(()=> alert("Tiempo Cumplido"),1000);
+        function mostrarMensaje(){
+            alert("Tiempo completo")
+        }
+
+       
+
+    </script>
+</body>
+</html>

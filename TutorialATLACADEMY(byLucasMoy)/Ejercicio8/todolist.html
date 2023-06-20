@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+</head>
+<body>
+    <label>Tarea:<input id="txtTarea" type="text"></label>
+    <button id="btnAgregar">Agregar</button>
+    <div id="listado">
+
+    </div>
+    <script src="todolist.js">
+        var nombres=[];
+        nombres.push("Lucas");
+        nombres.push("José");
+        nombres.push("María");
+        nombres.push("Eduardo");
+
+        /*for(var i=0;i<nombres.lenght;i++){
+            var nombre=nombres[i];
+            alert(nombre);
+        }*/
+
+        /*nombres[0]="Lucas";
+        nombres[1]="Pepe";
+        nombres[2]="María";*/
+        //alert(nombres[2]);
+        for(var nombre of nombres){
+            alert(nombre);
+        }
+
+    </script>
+</body>
+</html>

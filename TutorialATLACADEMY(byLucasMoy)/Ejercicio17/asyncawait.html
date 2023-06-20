@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async y Await</title>
+</head>
+<body>
+    <b>Nombre del Post:</b><span id="txtNombrePost"></span><br/>
+    <b>¿Está Completo?</b><span id="txtCompleto"></span>
+    <script>
+
+        async function cargarUrl(url){
+            let respuesta= await fetch(url);
+            return respuesta.json();
+        }
+         
+
+        async function cargarJson(){
+            let usuariosJson =await cargarUrl('https://jsonplaceholder.typicode.com/todos');
+            let titulos=await cargarUrl('https://jsonplaceholder.typicode.com/todos/1')
+            let json = await cargarUrl('https://jsonplaceholder.typicode.com/todos/1');
+            let spanNombrePost= document.getElementById("txtNombrePost");
+            spanNombrePost.innerText=json.title;
+            let spanCompleto = document.getElementById("txtCompleto");
+            //spanCompleto.innerText = json.completed ? "Está completo" :"Está incompleto";
+            if(json.completed){
+                spanCompleto.innerText="Está completo";
+            }else{
+                spanCompleto.innerText="Está incompleto";
+            }
+            //console.log(json);
+        }
+
+        cargarJson();
+    </script>
+</body>
+</html>

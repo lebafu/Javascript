@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <label>Nombre<input id="txtNombre" type="text"/></label><br/>
+    <label>Apellido<input id="txtApellido" type="text"/></label><br/>
+    <label>Telefono<input id="txtTelefono" type="text"/></label><br/>
+    <label>Email<input id="txtEmail" type="text"/></label><br/>
+    <button id="btnAgregar">Agregar</button>
+    
+    <div id="listado">
+
+    </div>
+    <script>
+        window.onload=iniciar;
+        var personas=[];
+        function iniciar(){
+            var btnAgregar=document.getElementById("btnAgregar");
+            btnAgregar.addEventListener("click",clickBtnAgregar);
+        }
+
+        function clickBtnAgregar(){
+            var nombre= document.getElementById("txtNombre").value;
+            var apellido= document.getElementById("txtApellido").value;
+            var telefono= document.getElementById("txtTelefono").value;
+            var email= document.getElementById("txtEmail").value;
+
+            var persona={
+            "nombre": nombre,
+            "apellido": apellido,
+            "telefono" : telefono,
+            "email" : email,
+            }
+            personas.push(persona);
+            mostrarPersonas();
+        }
+
+       
+        /*var persona={
+            "nombre": "Lucas",
+            "apellido": "Moyano",
+            "telefono" : 3474353543,
+            "email" : "lucasmoy@gmail.com",
+            "direccion" : "Avenida siempre viva 123",
+            "empleo":{
+                "nombre": "Programador",
+                "localidad":"España",
+            }
+        }*/
+
+        function mostrarPersonas(){
+            var listado= document.getElementById("listado");
+            var html="";
+            for(var persona of personas){
+                html+=persona.nombre+ ' ' + persona.apellido + ' ' + persona.telefono + ' '+ persona.email + '<br/>';
+            }
+            listado.innerHTML=html;
+        }
+        //alert(persona.empleo.nombre);
+        //persona.telefono="no tiene";
+        //alert(persona.telefono);
+        //console.log(persona);
+    </script>
+
+</body>
+</html>

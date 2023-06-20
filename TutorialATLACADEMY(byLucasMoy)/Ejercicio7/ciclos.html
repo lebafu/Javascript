@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+<body>
+    <script>
+        /*while(contador<3){
+        alert("Valor: " + contador);
+        contador++;
+    }
+
+    contador=0;
+    do{
+        alert("Valor: " + contador);
+        contador++;
+    }while(contador<3);
+    */
+    /*var sumatoria =0;
+    var contador=0;
+    debugger;
+    while(contador<=1000){
+        sumatoria=sumatoria+contador;
+        contador++;
+    }
+    alert(sumatoria);
+    */
+   
+    /*for(var i=0;i<=10;i++){
+        if(i % 2 ==0){
+            alert("El número "+i+ "es par");
+        }else{
+            alert("El número"+i+"es impar");
+        }
+    }*/
+
+    var contador=0;
+    var sumatoria=0;
+    for(i=0;i<1000;i++){
+        if(i%2==0){
+          sumatoria+=i; //sumatoria=sumatoria+i;
+        }
+    }
+    alert("La sumatoria de numeros pares entre 0 1000 es: "+ sumatoria);
+    
+    </script>
+</body>
+</html>
