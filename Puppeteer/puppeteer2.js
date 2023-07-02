@@ -69,7 +69,7 @@ async function loginToFacebook() {
 //await page.click('[aria-label="Messenger"]');
   await page.waitForNavigation({ timeout: 60000 }); // Aumentamos el tiempo de espera a 60 segundos (60000 ms)
   await page.click('input[aria-label="Buscar en Messenger"]');
-  await page.type('input[aria-label="Buscar en Messenger"]', 'Leonardo Bascuñan');
+  await page.type('input[aria-label="Buscar en Messenger"]', 'Pepito Perez');
   await page.keyboard.press('Enter');
   await page.waitForNavigation(); // Aumentamos el tiempo de espera a 60 segundos (60000 ms)
   // Esperar un momento para que se realice la acción después del inicio de sesión
