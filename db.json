@@ -1,19 +1,19 @@
 {
-  "tipo_modelo": [
-    {
-      "idTipo": 1,
-      "nombretTipo": "CASA",
-      "estadoTipo": "1"
-    },
-     {
-      "idTipo": 2,
-      "nombreTipo": "DEPARTAMENTO",
-      "estadoTipo": "1"
-    },
-   {
-      "id": 3,
-      "nombreTipo":"LOCAL COMERCIAL",
-      "estadoTipo": "1"
-    }
-  ],
+   "tipo_modelo":[
+      {
+         "idTipo":1,
+         "nombretTipo":"CASA",
+         "estadoTipo":"1"
+      },
+      {
+         "idTipo":2,
+         "nombreTipo":"DEPARTAMENTO",
+         "estadoTipo":"1"
+      },
+      {
+         "id":3,
+         "nombreTipo":"LOCAL COMERCIAL",
+         "estadoTipo":"1"
+      }
+   ]
 }
